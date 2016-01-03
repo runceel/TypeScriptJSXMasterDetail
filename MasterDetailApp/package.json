@@ -1,0 +1,22 @@
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "flux": "^2.1.1",
+    "history": "^1.17.0",
+    "react": "^0.14.5",
+    "react-bootstrap": "^0.28.1",
+    "react-datagrid": "^2.0.1",
+    "react-dom": "^0.14.5",
+    "react-router": "^1.0.3",
+    "whatwg-fetch": "^0.10.1"
+  }
+}
