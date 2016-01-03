@@ -39,7 +39,7 @@ class PeopleWebAPIUtils {
     }
 
     insert(p: Models.Person) {
-        fetch(getContextPath() + '/api/People', {
+        return fetch(getContextPath() + '/api/People', {
             headers: {
                 'Accept-Type': 'application/json',
                 'Content-Type': 'application/json'

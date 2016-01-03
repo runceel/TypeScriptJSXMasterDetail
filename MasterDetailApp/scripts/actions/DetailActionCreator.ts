@@ -3,6 +3,7 @@ import * as Actions from './../actions/Actions';
 import MasterDetailDispatcher from './../dispatcher/MasterDetailDispatcher';
 import BrowserHistory from './BrowserHistory';
 import PeopleWebAPIUtils from './../utils/PeopleWebAPIUtils';
+import MasterActionCreator from './MasterActionCreator';
 
 
 class DetailActionCreator {

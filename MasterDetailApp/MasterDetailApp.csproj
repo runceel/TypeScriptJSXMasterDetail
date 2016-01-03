@@ -151,10 +151,12 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="scripts\actions\BrowserHistory.ts" />
+    <TypeScriptCompile Include="scripts\actions\CreateActionCreator.ts" />
     <TypeScriptCompile Include="scripts\actions\DetailActionCreator.ts" />
     <TypeScriptCompile Include="scripts\actions\MasterActionCreator.ts" />
     <TypeScriptCompile Include="scripts\app.tsx" />
     <TypeScriptCompile Include="scripts\actions\Actions.ts" />
+    <TypeScriptCompile Include="scripts\components\CreateComposer.tsx" />
     <TypeScriptCompile Include="scripts\components\DetailComposer.tsx" />
     <TypeScriptCompile Include="scripts\components\MasterComposer.tsx" />
     <TypeScriptCompile Include="scripts\components\MasterDetailApp.tsx" />
