@@ -1,0 +1,34 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".d.ts" #>
+
+///<reference path='../react/react.d.ts' />
+
+import React = __React;
+<#
+var files = Directory
+    .GetFiles(this.Host.ResolvePath(@".\..\..\node_modules\material-ui-mdi\icons"))
+    .Select(x => Path.GetFileNameWithoutExtension(x))
+    .Select(x =>
+    {
+        var tokens = x.Split('-');
+        tokens = tokens.Select(y => char.ToUpper(y[0]) + y.Substring(1)).ToArray();
+        return new { NS = x, CN = string.Concat(tokens) };
+    });
+#>
+
+<#
+foreach (var x in files)
+{
+#>
+declare module 'material-ui-mdi/icons/<#= x.NS #>' {
+    class <#= x.CN #> extends React.Component<{}, {}> {}
+    export = <#= x.CN #>;
+}
+<#
+}
+#>

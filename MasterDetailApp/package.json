@@ -12,11 +12,14 @@
     "bootstrap": "^3.3.6",
     "flux": "^2.1.1",
     "history": "^1.17.0",
+    "material-ui": "^0.14.0",
+    "material-ui-mdi": "^0.3.4",
     "react": "^0.14.5",
     "react-bootstrap": "^0.28.1",
     "react-datagrid": "^2.0.1",
     "react-dom": "^0.14.5",
     "react-router": "^1.0.3",
+    "react-tap-event-plugin": "^0.2.1",
     "whatwg-fetch": "^0.10.1"
   }
 }

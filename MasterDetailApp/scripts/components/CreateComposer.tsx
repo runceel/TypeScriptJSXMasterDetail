@@ -2,6 +2,7 @@
 import * as Models from './../stores/Models';
 import {Col, Row, Button} from 'react-bootstrap';
 import CreateActionCreator from './../actions/CreateActionCreator';
+import {FlatButton, TextField} from 'material-ui';
 
 interface CreateComposerProps extends React.Props<{}> {
 }
@@ -40,20 +41,14 @@ export default class CreateComposer extends React.Component<CreateComposerProps,
                 <Row>
                     <Col md={12}>
                         <div className='form-group'>
-                            <label className='label'>
-                                名前
-                            </label>
-                            <input type='text' className='form-control' value={this.state.inputName} onChange={this.handleNameChange.bind(this)} />
+                            <TextField floatingLabelText='名前' fullWidth={true}  value={this.state.inputName} onChange={this.handleNameChange.bind(this) }/>
                         </div>
                         <div className='form-group'>
-                            <label className='label'>
-                                年齢
-                            </label>
-                            <input type='text' className='form-control' value={this.state.inputAge} onChange={this.handleAgeChange.bind(this)}/>
+                            <TextField floatingLabelText='年齢' fullWidth={true} value={this.state.inputAge} onChange={this.handleAgeChange.bind(this) }/>
                         </div>
-                        <Button block={true} bsStyle='primary' type='submit'>作成</Button>
+                        <FlatButton type='submit'>作成</FlatButton>
                     </Col>
-                </Row>
+                    </Row>
             </form>
         );
     }

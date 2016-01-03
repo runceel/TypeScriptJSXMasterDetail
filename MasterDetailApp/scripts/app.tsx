@@ -7,7 +7,9 @@ import CreateComposer from './components/CreateComposer';
 import MasterActionCreator from './actions/MasterActionCreator';
 import BrowserHistory from './actions/BrowserHistory';
 import {Link, Router, Route, IndexRoute} from 'react-router';
+import injectTapEventPlugin = require('react-tap-event-plugin');
 
+injectTapEventPlugin();
 MasterActionCreator.count();
 
 var routes = (

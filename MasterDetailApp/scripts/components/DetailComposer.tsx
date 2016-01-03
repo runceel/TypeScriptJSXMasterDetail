@@ -3,6 +3,7 @@ import DetailStore from './../stores/DetailStore';
 import DetailActionCreator from './../actions/DetailActionCreator';
 import * as Models from './../stores/Models';
 import {Col, Row, Button} from 'react-bootstrap';
+import {FlatButton, TextField} from 'material-ui';
 
 interface DetailComposerProps extends ReactRouter.RouteComponentProps<{}, { id: number }> {
 
@@ -68,14 +69,12 @@ export default class DetailComposer extends React.Component<DetailComposerProps,
                     <Row>
                         <Col md={12}>
                             <div className='form-group'>
-                                <label>名前</label>
-                                <input type='text' className='form-control' value={this.state.inputName} onChange={this.handleNameChange.bind(this)}/>
+                                <TextField floatingLabelText='名前' fullWidth={true}  value={this.state.inputName} onChange={this.handleNameChange.bind(this)}/>
                             </div>
                             <div className='form-group'>
-                                <label>年齢</label>
-                                <input type='text' className='form-control' value={this.state.inputAge} onChange={this.handleAgeChange.bind(this)}/>
+                                <TextField floatingLabelText='年齢' fullWidth={true} value={this.state.inputAge} onChange={this.handleAgeChange.bind(this)}/>
                             </div>
-                            <Button bsStyle='primary' block={true} type='submit'>更新</Button>
+                            <FlatButton type='submit'>更新</FlatButton>
                         </Col>
                     </Row>
                 </form>
