@@ -68,13 +68,9 @@ export default class DetailComposer extends React.Component<DetailComposerProps,
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     <Row>
                         <Col md={12}>
-                            <div className='form-group'>
-                                <TextField floatingLabelText='名前' fullWidth={true}  value={this.state.inputName} onChange={this.handleNameChange.bind(this)}/>
-                            </div>
-                            <div className='form-group'>
-                                <TextField floatingLabelText='年齢' fullWidth={true} value={this.state.inputAge} onChange={this.handleAgeChange.bind(this)}/>
-                            </div>
-                            <FlatButton type='submit'>更新</FlatButton>
+                            <TextField floatingLabelText='名前' fullWidth={true}  value={this.state.inputName} onChange={this.handleNameChange.bind(this) }/>
+                            <TextField floatingLabelText='年齢' fullWidth={true} value={this.state.inputAge} onChange={this.handleAgeChange.bind(this) }/>
+                            <FlatButton type='submit'>作成</FlatButton>
                         </Col>
                     </Row>
                 </form>

@@ -40,15 +40,11 @@ export default class CreateComposer extends React.Component<CreateComposerProps,
             <form onSubmit={this.handleOnSubmit.bind(this)}>
                 <Row>
                     <Col md={12}>
-                        <div className='form-group'>
-                            <TextField floatingLabelText='名前' fullWidth={true}  value={this.state.inputName} onChange={this.handleNameChange.bind(this) }/>
-                        </div>
-                        <div className='form-group'>
-                            <TextField floatingLabelText='年齢' fullWidth={true} value={this.state.inputAge} onChange={this.handleAgeChange.bind(this) }/>
-                        </div>
+                        <TextField floatingLabelText='名前' fullWidth={true}  value={this.state.inputName} onChange={this.handleNameChange.bind(this) }/>
+                        <TextField floatingLabelText='年齢' fullWidth={true} value={this.state.inputAge} onChange={this.handleAgeChange.bind(this) }/>
                         <FlatButton type='submit'>作成</FlatButton>
                     </Col>
-                    </Row>
+                </Row>
             </form>
         );
     }
