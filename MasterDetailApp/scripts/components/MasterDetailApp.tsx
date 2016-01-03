@@ -16,9 +16,6 @@ export default class MasterDetailApp extends React.Component<MasterDetailAppProp
                     <NavBrand>
                         <a href='#'>Master Detail アプリケーション</a>
                     </NavBrand>
-                    <Nav>
-                        <NavItem><Link label='Master' to='/' /></NavItem>
-                    </Nav>
                 </Navbar>
                 <div id='container'>
                     {this.props.children}
